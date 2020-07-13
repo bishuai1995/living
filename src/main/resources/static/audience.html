@@ -1,0 +1,33 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="#" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>直播</title>
+</head>
+<body>
+<h3>直播-观众端</h3>
+<div>
+    <label>请输入房间号：</label>
+    <input type="text" id="roomId" value="123456">
+</div>
+<div>
+    <label>请输入用户名：</label>
+    <input type="text" id="username" value="lisi">
+</div>
+<div>
+    <button onclick="start(false)" id="start">观看直播</button>
+    <button onclick="leave()" id="leave" disabled>离开</button>
+</div>
+<div style="margin-top: 5px">
+    <video id="remotevideo" autoplay playsinline width="640px" height="480px" style="border: 1px solid #ccc;"></video>
+    <textarea id="content" cols="60" rows="32" readonly="readonly"></textarea><br>
+    <input type="text" id="sendMsg">
+    <button type="button" onclick="sendMsg()">发送消息</button>
+</div>
+<script src="./js/jquery-3.2.1.js"></script>
+<script src="./js/adapter-latest.js"></script>
+<script src="js/kurento.js"></script>
+</body>
+</html>
